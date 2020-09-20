@@ -14,46 +14,46 @@ public class Poupador extends ProgramaPoupador {
 		
 		System.out.println();
 
-		//Ladrão
-		if(sensor.getVisaoIdentificacao()[7] == 200 || sensor.getVisaoIdentificacao()[2] == 200)
+		//Ladrï¿½o
+		if(sensor.getVisaoIdentificacao()[7] >= 200 || sensor.getVisaoIdentificacao()[2] >= 200)
 		{
 			//fuga
-			if(sensor.getVisaoIdentificacao()[16] != 1 && sensor.getVisaoIdentificacao()[16] != 200 && sensor.getVisaoIdentificacao()[16] != 0)
+			if(sensor.getVisaoIdentificacao()[16] != 1 && sensor.getVisaoIdentificacao()[16] != 200)
 				return 2;
-			else if(sensor.getVisaoIdentificacao()[11] != 1 && sensor.getVisaoIdentificacao()[11] != 200 && sensor.getVisaoIdentificacao()[11] != 0)
+			else if(sensor.getVisaoIdentificacao()[11] != 1 && sensor.getVisaoIdentificacao()[11] != 200 )
 				return 4;
-			else if(sensor.getVisaoIdentificacao()[12] != 1 && sensor.getVisaoIdentificacao()[12] != 200 && sensor.getVisaoIdentificacao()[12] != 0)
+			else if(sensor.getVisaoIdentificacao()[12] != 1 && sensor.getVisaoIdentificacao()[12] != 200 )
 				return 3;
 			
-		} else if(sensor.getVisaoIdentificacao()[11] == 200  || sensor.getVisaoIdentificacao()[10] == 200)
+		} else if(sensor.getVisaoIdentificacao()[11] >= 200  || sensor.getVisaoIdentificacao()[10] >= 200)
 		{
 			//fuga
-			if(sensor.getVisaoIdentificacao()[12] != 1 && sensor.getVisaoIdentificacao()[12] != 200 && sensor.getVisaoIdentificacao()[12] != 0)
+			if(sensor.getVisaoIdentificacao()[12] != 1 && sensor.getVisaoIdentificacao()[12] != 200 )
 				return 3;
-			else if(sensor.getVisaoIdentificacao()[7] != 1 && sensor.getVisaoIdentificacao()[7] != 200 && sensor.getVisaoIdentificacao()[7] != 0)
+			else if(sensor.getVisaoIdentificacao()[7] != 1 && sensor.getVisaoIdentificacao()[7] != 200 )
 				return 1;
-			else if(sensor.getVisaoIdentificacao()[16] != 1 && sensor.getVisaoIdentificacao()[16] != 200 && sensor.getVisaoIdentificacao()[16] != 0)
+			else if(sensor.getVisaoIdentificacao()[16] != 1 && sensor.getVisaoIdentificacao()[16] != 200 )
 				return 2;
 			
 			
-		} else if(sensor.getVisaoIdentificacao()[12] >= 200 || sensor.getVisaoIdentificacao()[13] == 200)
+		} else if(sensor.getVisaoIdentificacao()[12] >= 200 || sensor.getVisaoIdentificacao()[13] >= 200)
 		{
 			//fuga
-			if(sensor.getVisaoIdentificacao()[11] != 1 && sensor.getVisaoIdentificacao()[11] != 200 && sensor.getVisaoIdentificacao()[11] != 0)
+			if(sensor.getVisaoIdentificacao()[11] != 1 && sensor.getVisaoIdentificacao()[11] != 200)
 				return 4;
-			else if(sensor.getVisaoIdentificacao()[7] != 1 && sensor.getVisaoIdentificacao()[7] != 200 && sensor.getVisaoIdentificacao()[7] != 0)
+			else if(sensor.getVisaoIdentificacao()[7] != 1 && sensor.getVisaoIdentificacao()[7] != 200 )
 				return 1;
-			else if(sensor.getVisaoIdentificacao()[16] != 1 && sensor.getVisaoIdentificacao()[16] != 200 && sensor.getVisaoIdentificacao()[16] != 0)
+			else if(sensor.getVisaoIdentificacao()[16] != 1 && sensor.getVisaoIdentificacao()[16] != 200 )
 				return 2;
 			
-		} else if(sensor.getVisaoIdentificacao()[16] == 200 || sensor.getVisaoIdentificacao()[21] == 200)
+		} else if(sensor.getVisaoIdentificacao()[16] >= 200 || sensor.getVisaoIdentificacao()[21] >= 200)
 		{
 			//fuga
-			if(sensor.getVisaoIdentificacao()[7] != 1 && sensor.getVisaoIdentificacao()[7] != 200 && sensor.getVisaoIdentificacao()[7] != 0)
+			if(sensor.getVisaoIdentificacao()[7] != 1 && sensor.getVisaoIdentificacao()[7] != 200 )
 				return 1;
-			else if(sensor.getVisaoIdentificacao()[11] != 1 && sensor.getVisaoIdentificacao()[11] != 200 && sensor.getVisaoIdentificacao()[11] != 0)
+			else if(sensor.getVisaoIdentificacao()[11] != 1 && sensor.getVisaoIdentificacao()[11] != 200 )
 				return 4;
-			else if(sensor.getVisaoIdentificacao()[12] != 1 && sensor.getVisaoIdentificacao()[12] != 200 && sensor.getVisaoIdentificacao()[12] != 0)
+			else if(sensor.getVisaoIdentificacao()[12] != 1 && sensor.getVisaoIdentificacao()[12] != 200 )
 				return 3;
 		}
 		
