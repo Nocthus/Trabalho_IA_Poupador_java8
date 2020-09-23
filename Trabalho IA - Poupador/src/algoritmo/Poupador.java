@@ -11,6 +11,8 @@ public class Poupador extends ProgramaPoupador {
     private boolean mapeou = false;
 
     private int cont = 0;
+    
+    private int parede=100;
 
     private Map<POSICAO, Integer> mapaOcorrencias = new HashMap<>();
 
