@@ -15,6 +15,8 @@ public class Poupador extends ProgramaPoupador {
     private int parede=100;
 
     private Map<POSICAO, Integer> mapaOcorrencias = new HashMap<>();
+    
+    private String texto;
 
     private enum POSICAO {
         NEUTRO(0), CIMA(1), BAIXO(2), ESQUERDA(4), DIREITA(3);

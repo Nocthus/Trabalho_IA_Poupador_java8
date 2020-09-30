@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a80984b3-1a78-4eab-8096-9bf3927f2743" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/classes/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/algoritmo/Poupador.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/algoritmo/Poupador.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algoritmo/Poupador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algoritmo/Poupador.java" afterDir="false" />
     </list>
@@ -88,6 +89,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="799" y="428" key="#VCS_History_Cache_Settings" timestamp="1601431809605">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="799" y="428" key="#VCS_History_Cache_Settings/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601431809605" />
     <state x="545" y="128" width="745" height="595" key="#xdebugger.evaluate" timestamp="1600905209476">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -136,10 +141,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600656637068" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600904306978">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601431808933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600904306978" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601431808933" />
   </component>
   <component name="masterDetails">
     <states>
