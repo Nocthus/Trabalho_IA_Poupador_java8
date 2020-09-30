@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Poupador extends ProgramaPoupador {
 
-    private Integer[][] caminhos = new Integer[30][30];
+    private static Integer[][] caminhos = new Integer[30][30];
 
     private boolean preencheu = false;
 
@@ -30,6 +30,7 @@ public class Poupador extends ProgramaPoupador {
         }
     }
 
+
     public int acao() {
         cont++;
 
@@ -48,7 +49,6 @@ public class Poupador extends ProgramaPoupador {
 
         mapearCaminhos(sensor);
 
-        //Ladr�o
         if (sensor.getVisaoIdentificacao()[7] >= 200 || sensor.getVisaoIdentificacao()[2] >= 200) { // se o que tem em cima é ladrão
             if (sensor.getVisaoIdentificacao()[16] != 1 && sensor.getVisaoIdentificacao()[16] != 200) // diferente de uma parete
                 return 2;
@@ -98,21 +98,15 @@ public class Poupador extends ProgramaPoupador {
         }
 
 
-        //Parede
-		/*else if(sensor.getVisaoIdentificacao()[7] == 1)
-		{
+		else if(sensor.getVisaoIdentificacao()[7] == 1){
 			return 2;
-		} else if(sensor.getVisaoIdentificacao()[11] == 1)
-		{
+		} else if(sensor.getVisaoIdentificacao()[11] == 1){
 			return 3;
-		} else if(sensor.getVisaoIdentificacao()[12] == 1)
-		{
+		} else if(sensor.getVisaoIdentificacao()[12] == 1) {
 			return 4;
-		} else if(sensor.getVisaoIdentificacao()[16] == 1)
-		{
+		} else if(sensor.getVisaoIdentificacao()[16] == 1){
 			return 1;
 		}
-		*/
 
         //Banco
         /*
@@ -202,6 +196,7 @@ public class Poupador extends ProgramaPoupador {
 
         return POSICAO.NEUTRO;
     }
+
 
 
 }
