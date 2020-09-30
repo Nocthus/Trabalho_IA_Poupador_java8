@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a80984b3-1a78-4eab-8096-9bf3927f2743" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/classes/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Labirintos/Labirinto.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Labirintos/Labirinto.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/algoritmo/Poupador.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/algoritmo/Poupador.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algoritmo/Poupador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algoritmo/Poupador.java" afterDir="false" />
     </list>
@@ -30,6 +33,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RunManager">
     <configuration name="Executa" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -89,62 +93,100 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="799" y="428" key="#VCS_History_Cache_Settings" timestamp="1601431809605">
+    <state x="799" y="428" key="#VCS_History_Cache_Settings" timestamp="1601431890995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="799" y="428" key="#VCS_History_Cache_Settings/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601431809605" />
-    <state x="545" y="128" width="745" height="595" key="#xdebugger.evaluate" timestamp="1600905209476">
+    <state x="799" y="428" key="#VCS_History_Cache_Settings/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601431890995" />
+    <state x="137" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601426451599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="545" y="128" width="745" height="595" key="#xdebugger.evaluate/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600905209476" />
-    <state width="440" height="466" key="DebuggerActiveHint" timestamp="1600649656811">
+    <state x="137" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601426451599" />
+    <state x="887" y="109" width="745" height="595" key="#xdebugger.evaluate" timestamp="1601450749346">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="440" height="466" key="DebuggerActiveHint/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600649656811" />
-    <state width="1877" height="286" key="GridCell.Tab.0.bottom" timestamp="1600912913617">
+    <state x="887" y="109" width="745" height="595" key="#xdebugger.evaluate/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601450749346" />
+    <state width="486" height="466" key="DebuggerActiveHint" timestamp="1601450695563">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600912913617" />
-    <state width="1877" height="286" key="GridCell.Tab.0.center" timestamp="1600912913617">
+    <state width="486" height="466" key="DebuggerActiveHint/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601450695563" />
+    <state width="1877" height="207" key="GridCell.Tab.0.bottom" timestamp="1601451187959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600912913617" />
-    <state width="1877" height="286" key="GridCell.Tab.0.left" timestamp="1600912913616">
+    <state width="1877" height="207" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601451187959" />
+    <state width="1877" height="207" key="GridCell.Tab.0.center" timestamp="1601451187959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600912913616" />
-    <state width="1877" height="286" key="GridCell.Tab.0.right" timestamp="1600912913617">
+    <state width="1877" height="207" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601451187959" />
+    <state width="1877" height="207" key="GridCell.Tab.0.left" timestamp="1601451187958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600912913617" />
-    <state width="1877" height="286" key="GridCell.Tab.1.bottom" timestamp="1600912913617">
+    <state width="1877" height="207" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601451187958" />
+    <state width="1877" height="207" key="GridCell.Tab.0.right" timestamp="1601451187959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600912913617" />
-    <state width="1877" height="286" key="GridCell.Tab.1.center" timestamp="1600912913617">
+    <state width="1877" height="207" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601451187959" />
+    <state width="1877" height="207" key="GridCell.Tab.1.bottom" timestamp="1601451187959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600912913617" />
-    <state width="1877" height="286" key="GridCell.Tab.1.left" timestamp="1600912913617">
+    <state width="1877" height="207" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601451187959" />
+    <state width="1877" height="207" key="GridCell.Tab.1.center" timestamp="1601451187959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600912913617" />
-    <state width="1877" height="286" key="GridCell.Tab.1.right" timestamp="1600912913617">
+    <state width="1877" height="207" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601451187959" />
+    <state width="1877" height="207" key="GridCell.Tab.1.left" timestamp="1601451187959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600912913617" />
-    <state x="680" y="260" width="552" height="524" key="StructurePopup" timestamp="1600905097480">
+    <state width="1877" height="207" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601451187959" />
+    <state width="1877" height="207" key="GridCell.Tab.1.right" timestamp="1601451187959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="680" y="260" width="552" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600905097480" />
+    <state width="1877" height="207" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601451187959" />
+    <state x="775" y="453" key="ReplaceDuplicatesPrompt" timestamp="1601433660612">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="775" y="453" key="ReplaceDuplicatesPrompt/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601433660612" />
+    <state x="680" y="260" width="552" height="524" key="StructurePopup" timestamp="1601449926831">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="680" y="260" width="552" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601449926831" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600656637068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600656637068" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601431808933">
+    <state x="690" y="281" key="extract.method.dialog" timestamp="1601435966151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601431808933" />
+    <state x="690" y="281" key="extract.method.dialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601435966151" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601437918522">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601437918522" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/algoritmo/Poupador.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/algoritmo/Poupador.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/algoritmo/Poupador.java</url>
+          <line>192</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="algoritmo.SensoresPoupador" memberName="visaoIdentificacao" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="masterDetails">
     <states>
