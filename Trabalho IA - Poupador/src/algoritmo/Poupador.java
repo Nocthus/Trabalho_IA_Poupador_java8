@@ -84,6 +84,22 @@ public class Poupador extends ProgramaPoupador {
             return (int) (Math.random() * 5);
         }
 
+        if (temBandido(sensor)) {
+            return getPosicaoFuga(sensor).getValor();
+        }
+
+        if (temMoedasAoRedor(sensor)) {
+            return getPosicaoMoeda(sensor).getValor();
+        }
+
+        if (temPastilha(sensor)) {
+            return getDirecaoPastilha(sensor).getValor();
+        }
+
+        if (temBancoPerto(sensor)) {
+            return getDirecaoBanco(sensor).getValor();
+        }
+
         if (temParedeEmUmaDirecao(sensor)) {
             return getPosicaoParaParedeEmUmaDirecao(sensor).getValor();
         }
@@ -92,12 +108,49 @@ public class Poupador extends ProgramaPoupador {
             return getPosicaoParaParedeEmMaisDeUmaDirecao(sensor).getValor();
         }
 
-        if (temMoedasAoRedor(sensor)) {
-            return getPosicaoMoeda(sensor).getValor();
-        }
 
         int menosPassagens = verificarOrigem(sensor);
         return (int) getPosicaoDestino(sensor, menosPassagens).getValor();
+    }
+
+    private boolean temBancoPerto(SensoresPoupador sensor) {
+        for (Integer nVision : visaoAoRedor) {
+            if (sensor.getVisaoIdentificacao()[nVision] == 3) {
+                mapsTemParede.put(getPosicaoPorCodigo(nVision), true);
+                mapearParede(nVision);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean temPastilha(SensoresPoupador sensor) {
+        for (Integer nVision : visaoAoRedor) {
+            if (sensor.getVisaoIdentificacao()[nVision] == 5) {
+                mapsTemParede.put(getPosicaoPorCodigo(nVision), true);
+                mapearParede(nVision);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private POSICAO getDirecaoPastilha(SensoresPoupador sensoresPoupador) {
+        for (Integer nVision : visaoAoRedor) {
+            if (sensoresPoupador.getVisaoIdentificacao()[nVision] == 5) {
+                return getPosicaoPorCodigo(nVision);
+            }
+        }
+        return POSICAO.NEUTRO;
+    }
+
+    private POSICAO getDirecaoBanco(SensoresPoupador sensoresPoupador) {
+        for (Integer nVision : visaoAoRedor) {
+            if (sensoresPoupador.getVisaoIdentificacao()[nVision] == 3) {
+                return getPosicaoPorCodigo(nVision);
+            }
+        }
+        return POSICAO.NEUTRO;
     }
 
     private POSICAO getPosicaoMoeda(SensoresPoupador sensoresPoupador) {
@@ -120,6 +173,26 @@ public class Poupador extends ProgramaPoupador {
         return false;
     }
 
+    private Boolean temBandido(SensoresPoupador sensoresPoupador) {
+        for (Integer nVision : visaoAoRedor) {
+            if (sensoresPoupador.getVisaoIdentificacao()[nVision] >= 200) {
+                mapsTemParede.put(getPosicaoPorCodigo(nVision), true);
+                mapearParede(nVision);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private POSICAO getPosicaoFuga(SensoresPoupador sensoresPoupador) {
+        for (Integer nVision : visaoAoRedor) {
+            if (sensoresPoupador.getVisaoIdentificacao()[nVision] == 4) {
+                return getPosicaoContraria(getPosicaoPorCodigo(nVision));
+            }
+        }
+        return POSICAO.NEUTRO;
+    }
+
     private Boolean temParedeEmUmaDirecao(SensoresPoupador sensoresPoupador) {
         Set<POSICAO> posicoes = new HashSet<>();
         for (Integer nVision : visaoAoRedor) {
@@ -133,11 +206,11 @@ public class Poupador extends ProgramaPoupador {
     private POSICAO getPosicaoParaParedeEmUmaDirecao(SensoresPoupador sensoresPoupador) {
         List<POSICAO> posicoesEncurralado = new ArrayList<>();
         for (Integer nVision : visaoAoRedor) {
-            if ((sensoresPoupador.getVisaoIdentificacao()[13] == 1  || sensoresPoupador.getVisaoIdentificacao()[11] == 1) &&  (sensoresPoupador.getVisaoIdentificacao()[12] == 1  || sensoresPoupador.getVisaoIdentificacao()[10] == 1)) {
+            if ((sensoresPoupador.getVisaoIdentificacao()[13] == 1 || sensoresPoupador.getVisaoIdentificacao()[11] == 1) && (sensoresPoupador.getVisaoIdentificacao()[12] == 1 || sensoresPoupador.getVisaoIdentificacao()[10] == 1)) {
                 System.out.print("encurralado");
             }
 
-            if ((sensoresPoupador.getVisaoIdentificacao()[21] == 1  || sensoresPoupador.getVisaoIdentificacao()[7] == 1) &&  (sensoresPoupador.getVisaoIdentificacao()[12] == 1  || sensoresPoupador.getVisaoIdentificacao()[10] == 1)) {
+            if ((sensoresPoupador.getVisaoIdentificacao()[21] == 1 || sensoresPoupador.getVisaoIdentificacao()[7] == 1) && (sensoresPoupador.getVisaoIdentificacao()[12] == 1 || sensoresPoupador.getVisaoIdentificacao()[10] == 1)) {
                 System.out.print("encurralado");
             }
 
@@ -154,7 +227,7 @@ public class Poupador extends ProgramaPoupador {
                     posicoesEncurralado.add(getPosicaoPorCodigo(nVision));
                     List<POSICAO> posicoesEscolherUma = Arrays.asList(POSICAO.values());
                     posicoesEscolherUma = posicoesEscolherUma.stream().distinct().filter(p -> !posicoesEncurralado.contains(p) | !p.equals(POSICAO.NEUTRO)).collect(Collectors.toList());
-                    return posicoesEscolherUma.get(0);
+                    return posicoesParaEscolha(posicoesEncurralado).get(0);
                 } else {
                     return getPosicaoContraria(getPosicaoPorCodigo(nVision));
                 }
@@ -173,6 +246,27 @@ public class Poupador extends ProgramaPoupador {
             if (sensoresPoupador.getVisaoIdentificacao()[nVision] == 1) {
                 posicoes.add(getPosicaoPorCodigo(nVision));
             }
+
+            if ((sensoresPoupador.getVisaoIdentificacao()[11] == 1 && sensoresPoupador.getVisaoIdentificacao()[13] == 1) || (sensoresPoupador.getVisaoIdentificacao()[10] == 1 && sensoresPoupador.getVisaoIdentificacao()[12] == 1)) {
+                if ((sensoresPoupador.getVisaoIdentificacao()[11] == 1 && sensoresPoupador.getVisaoIdentificacao()[13] == 1)) {
+                    posicoes.add(getPosicaoPorCodigo(11));
+                    posicoes.add(getPosicaoPorCodigo(13));
+                } else {
+                    posicoes.add(getPosicaoPorCodigo(10));
+                    posicoes.add(getPosicaoPorCodigo(12));
+                }
+            }
+
+            if ((sensoresPoupador.getVisaoIdentificacao()[2] == 1 && sensoresPoupador.getVisaoIdentificacao()[16] == 1)) {
+                posicoes.add(getPosicaoPorCodigo(2));
+                posicoes.add(getPosicaoPorCodigo(16));
+            }
+            if (sensoresPoupador.getVisaoIdentificacao()[21] == 1 && sensoresPoupador.getVisaoIdentificacao()[7] == 1) {
+                posicoes.add(getPosicaoPorCodigo(21));
+                posicoes.add(getPosicaoPorCodigo(7));
+            }
+
+
         }
         return posicoes.size() > 1;
     }
@@ -197,11 +291,11 @@ public class Poupador extends ProgramaPoupador {
 
     private List<POSICAO> posicoesParaEscolha(List<POSICAO> notIn) {
         List<POSICAO> not = new ArrayList<>();
-            for (POSICAO no : Arrays.asList(POSICAO.values())) {
-                if (!notIn.contains(no)) {
-                    not.add(no);
-                }
+        for (POSICAO no : Arrays.asList(POSICAO.values())) {
+            if (!notIn.contains(no) && no != POSICAO.NEUTRO) {
+                not.add(no);
             }
+        }
         return not;
     }
 
